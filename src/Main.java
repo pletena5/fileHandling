@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         // test the database works
         System.out.println("Database");
-        Database db = new Database("Document.txt", 10);
+        Database db = new Database("Document", 10);
         db.appendRecord("1.ABCDEFGH");
         db.appendRecord("2.ABCDEFGH");
         db.appendRecord("3.ABCDEFGH");
