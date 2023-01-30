@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         // test the database works
+
         System.out.println("Database");
         Database db = new Database("Document", 10);
         db.appendRecord("1.ABCDEFGH");
@@ -11,5 +12,13 @@ public class Main {
         System.out.println(db.findRecord("EBCDEFGHIJ")); // false
         System.out.println(db.findRecord("2.ABCDEFGH")); // true
         System.out.println("count = " + db.getRecordCount()); // 4
+        db.deleteRecord(2);
+
+        /*
+        PersistentArrayList arr = new PersistentArrayList();
+        arr.add("Hello");
+        System.out.println(arr.get(0));
+        arr.clear();
+*/
     }// main
 }// class main

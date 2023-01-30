@@ -44,6 +44,7 @@ public class Database {
 
 
 
+
     public static boolean findRecord(String data){
         boolean found = false;
         ArrayList<String> allData = new ArrayList<>();
@@ -72,6 +73,22 @@ public class Database {
 
         return allData.size();
     }// get record count
+
+
+
+    public static void deleteRecord(int i){
+
+        FileHandling fh = new FileHandling();
+        ArrayList<String> data = fh.lineReturn(fileName);
+
+        fh.FileWrite(fileName , "" , false);
+        data.set(i , " ");
+
+        for (int e = 0; e < data.size(); e ++){
+            fh.FileWriteLine(fileName , data.get(e) , true);
+        }// for loop
+
+    }// delete record
 
 
 
